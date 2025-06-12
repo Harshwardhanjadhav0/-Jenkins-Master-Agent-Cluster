@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: jenkins-master
+  labels:
+    app: jenkins-master
+spec:
+  containers:
+  - name: jenkins-master
+    image: ubuntu:22.04
+    ports:
+    - containerPort: 8080
+    command: [ "sleep", "infinity" ] # Keeps the container/pod in running always
+

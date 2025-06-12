@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: jenkins-agent
+  labels:
+    app: jenkins-agent
+spec:
+  containers:
+  - name: jenkins-agent
+    image: ubuntu:22.04
+    command: [ "sleep", "infinity" ] # Keeps the agent container/pod in running state always
+
